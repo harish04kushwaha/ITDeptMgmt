@@ -1,0 +1,13 @@
+.home-container {
+  font-size: 25px;
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f3f3f7;
+  min-height: calc(100vh - 160px);
+}
+
+.home-container h2 {
+  font-size: 50px;
+  color: #333;
+  margin-bottom: 20px;
+}

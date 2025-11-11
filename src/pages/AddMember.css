@@ -1,0 +1,58 @@
+/* ===== ADD MEMBER PAGE ===== */
+.add-member {
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.add-member-form {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.add-member-form h2 {
+  text-align: center;
+  color: #ffa726;
+  margin-bottom: 20px;
+}
+
+.add-member-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.add-member-form button {
+  width: 100%;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-member-form button:hover {
+  background-color: #009974;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .add-member-form {
+    padding: 20px;
+  }
+}

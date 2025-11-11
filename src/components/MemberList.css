@@ -1,0 +1,48 @@
+.member-container {
+  padding: 40px 80px;
+  background-color: #f3f3f7;
+  min-height: calc(100vh - 160px);
+  text-align: center;
+}
+
+.filter-dropdown {
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1c4e9; /* soft lavender border */
+  background-color: #f8f5ff; /* light pastel background */
+  /*color: #4b3b83; /*muted purple text */ 
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* slightly bold */
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.filter-dropdown:focus {
+  border-color: #a67cdb; /* pastel purple on focus */
+  box-shadow: 0 0 5px rgba(166, 124, 219, 0.3);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: white;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background-color: #e67300;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

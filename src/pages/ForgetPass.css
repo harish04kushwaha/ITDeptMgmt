@@ -1,0 +1,114 @@
+/* ===== Forgot Password Page ===== */
+.forget-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  background-color: #f6f7fb; /* soft gray background */
+  padding: 30px;
+}
+
+.forget-box {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 4px 20px rgba(180, 149, 240, 0.15);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.forget-box:hover {
+  transform: translateY(-3px);
+}
+
+.forget-box h2 {
+  color: #4b4b7c;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #7a7a9a;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.forget-box form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.forget-box label {
+  color: #4b4b7c;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.forget-box input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f8f8ff;
+  margin-bottom: 15px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.forget-box input:focus {
+  border-color: #b495f0;
+}
+
+.message {
+  color: #4b4b7c;
+  background-color: #efe9ff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.forget-box button {
+  background-color: #b495f0;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.forget-box button:hover {
+  background-color: #9b7ae0;
+  transform: scale(1.03);
+}
+
+.forget-links {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.back-link {
+  color: #6d5ba1;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #9b7ae0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .forget-box {
+    padding: 30px 25px;
+  }
+}
