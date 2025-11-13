@@ -5,9 +5,9 @@ import "./MemberList.css";
 const sampleData = [
   {
     id: 1,
-    name: "Ravi Kumar",
-    designation: "Developer",
-    email: "ravi@company.com",
+    name: "Ashok Kumar Singh",
+    designation: "Sr. Software Developer",
+    email: "2011aksingh@gmail.com",
   },
   {
     id: 2,

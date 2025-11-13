@@ -6,8 +6,88 @@
   min-height: calc(100vh - 160px);
 }
 
+/* ===== Floating Animated Heading ===== */
 .home-container h2 {
-  font-size: 50px;
-  color: #333;
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #b495f0, #9b7ae0, #b495f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  animation: floatLeftRight 6s ease-in-out infinite;
+  letter-spacing: 1px;
   margin-bottom: 20px;
+}
+
+/* ===== Left-Right Floating Animation ===== */
+@keyframes floatLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-40px);
+  }
+  50% {
+    transform: translateX(40px);
+  }
+  75% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ===== Gentle Glow Underline ===== */
+.home-container h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #b495f0, #9b7ae0, #b495f0);
+  border-radius: 2px;
+  animation: underlineGlow 3s ease-in-out infinite;
+}
+
+@keyframes underlineGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.1);
+  }
+}
+
+/* ===== Paragraph ===== */
+.home-container p {
+  color: #555;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* ===== Image ===== */
+.homeimg {
+  width: 500px;
+  max-width: 80%;
+  height: auto;
+  margin-top: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(180, 149, 240, 0.2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .home-container h2 {
+    font-size: 32px;
+  }
+  .home-container p {
+    font-size: 16px;
+  }
 }
