@@ -40,7 +40,6 @@ function Login() {
 
   return (
     <>
-      {/* <Header /> */}
       <div className="login-page">
         <div className="login-box">
           <h2>Welcome Back 👋</h2>
@@ -74,7 +73,6 @@ function Login() {
           </form>
         </div>
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

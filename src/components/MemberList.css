@@ -1,3 +1,96 @@
+/* =====================
+   FILTER ROW
+===================== */
+.filter-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Search Input */
+.search-input {
+  padding: 10px;
+  width: 220px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #a67cdb;
+  box-shadow: 0 0 5px rgba(166, 124, 219, 0.3);
+}
+
+/* Animated Dropdown */
+.filter-dropdown {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1c4e9;
+  background-color: #f8f5ff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  /* Animation */
+  transform-origin: top;
+  animation: dropdownFade 0.3s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.filter-dropdown:focus {
+  border-color: #a67cdb;
+  box-shadow: 0 0 5px rgba(166, 124, 219, 0.3);
+}
+
+/* Reset Button */
+.reset-btn {
+  padding: 10px 16px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  height: 42px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: #c9302c;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+
+/* =============================
+   CONTAINER
+============================= */
 .member-container {
   padding: 40px 80px;
   background-color: #f3f3f7;
@@ -5,26 +98,24 @@
   text-align: center;
 }
 
-.filter-dropdown {
-  margin-bottom: 20px;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #d1c4e9; /* soft lavender border */
-  background-color: #f8f5ff; /* light pastel background */
-  /*color: #4b3b83; /*muted purple text */ 
-  font-family: "Poppins", sans-serif;
-  font-weight: 600; /* slightly bold */
-  font-size: 15px;
-  outline: none;
-  transition: all 0.3s ease;
+
+/* =============================
+   CLICKABLE NAME
+============================= */
+.clickable-name {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.filter-dropdown:focus {
-  border-color: #a67cdb; /* pastel purple on focus */
-  box-shadow: 0 0 5px rgba(166, 124, 219, 0.3);
+.clickable-name:hover {
+  color: darkblue;
 }
 
 
+/* =============================
+   DESKTOP TABLE VIEW
+============================= */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -45,4 +136,56 @@ th {
 
 tr:nth-child(even) {
   background-color: #f9f9f9;
+}
+
+
+/* =============================
+   MOBILE CARD VIEW
+============================= */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 18px;
+    border: 2px solid #e67300;
+    border-radius: 12px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+  }
+
+  tr:hover {
+    transform: translateY(-4px);
+  }
+
+  td {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 5px;
+    font-size: 15px;
+  }
+
+  td::before {
+    font-weight: bold;
+    color: #4b4b7c;
+    content: attr(data-label);
+  }
+
+  /* container padding reduced for mobile */
+  .member-container {
+    padding: 20px;
+  }
 }
